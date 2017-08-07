@@ -4,10 +4,11 @@ import ru.ppzhuk.ui.GameElement
 import java.awt.Graphics
 
 object Game : GameElement {
-    val point1: Vector = Vector(50.0, 150.0)
-    val point2: Vector = Vector(250.0, 150.0)
-    val point3: Vector = Vector(150.0, 50.0)
+    val point1: Vector = Vector(50.0, 500.0)
+    val point2: Vector = Vector(550.0, 500.0)
+    val point3: Vector = Vector(300.0, 100.0)
     val mouse: Mouse = Mouse()
+    val cursor: Cursor = Cursor()
 
     override fun update() {
         mouse.update()

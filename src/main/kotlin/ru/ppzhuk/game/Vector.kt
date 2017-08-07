@@ -8,13 +8,15 @@ data class Vector(val x: Double, val y: Double) {
         val xdiff = x - other.x
         val ydiff = y - other.y
 
-        return Math.sqrt(xdiff*xdiff + (ydiff*ydiff))
+        return Math.sqrt(xdiff * xdiff + (ydiff * ydiff))
     }
+
+    constructor() : this(0.0, 0.0)
 
     companion object {
         @JvmStatic
         fun normalize(vec: Vector, maxVelocity: Double): Vector {
-            val length = Vector(vec.x, vec.y).distance(Vector(0.0, 0.0))
+            val length = Vector(vec.x, vec.y).distance(Vector())
             var x1 = vec.x * maxVelocity / length
             if (x1.isNaN()) x1 = 0.0
             var y1 = vec.y * maxVelocity / length
