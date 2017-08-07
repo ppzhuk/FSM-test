@@ -41,7 +41,8 @@ class Mouse(x: Double, y: Double) : GameElement {
         }
 
         if (position.distance(point) < 10.0) {
-            brain.state = secondState
+            brain.popState()
+            brain.pushState(secondState)
         }
     }
 
