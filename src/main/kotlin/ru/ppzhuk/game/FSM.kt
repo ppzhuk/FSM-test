@@ -1,11 +1,7 @@
 package ru.ppzhuk.game
 
 class FSM(
-        private var currState: () -> Unit
+        var state: () -> Unit
 ) {
-    fun setState(state: () -> Unit) {
-        currState = state
-    }
-
-    fun update() = currState()
+    fun update() = state()
 }

@@ -1,7 +1,6 @@
 package ru.ppzhuk
 
 import ru.ppzhuk.game.Game
-import ru.ppzhuk.game.Mouse
 import ru.ppzhuk.ui.GameElement
 import ru.ppzhuk.ui.GamePanel
 import javax.swing.JFrame
@@ -14,7 +13,7 @@ val WINDOW_HEIGHT = 300
 
 fun main(args: Array<String>) {
     val gui = createGUI(Game)
-    Timer(TIMER_UPDATE_RATE) {
+    Timer(1000/TIMER_UPDATE_RATE) {
         gui.repaint()
     }.start()
 }
