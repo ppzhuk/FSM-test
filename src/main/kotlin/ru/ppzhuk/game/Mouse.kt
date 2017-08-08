@@ -25,7 +25,7 @@ class Mouse(x: Double, y: Double) : GameElement {
         @JvmStatic private val CURSOR_MIN_DISTANCE = 100.0
     }
 
-    constructor() : this(300.0, 115.0)
+    constructor() : this(300.0, 300.0)
 
     private fun findPoint1(): Unit = findPoint(Game.point1, this::findPoint2)
     private fun findPoint2(): Unit = findPoint(Game.point2, this::findPoint3)
